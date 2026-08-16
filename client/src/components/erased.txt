@@ -1,0 +1,63 @@
+FloraSectionTop.tsx:
+
+{/* --- IMAGEN CURVA DERECHA--- */}
+      <img
+        src="/images/arco-curvo-girasol-magnolia-rosa-yellow-lavandas.webp" // Usamos la imagen curva
+        alt="Decoración floral esquina superior derecha"
+        // EXPLICACIÓN DE CLASES CLAVE:
+        // absolute top-0 right-0: Posición fija en la esquina superior derecha.
+        // w-2/3 md:w-5/12: Tamaño relativo. 2/3 del ancho en celular, un poco menos de la mitad en PC.
+        // rotate-45: La rotación solicitada.
+        // translate-x-[20%] -translate-y-[35%]: Estos valores "empujan" la imagen hacia afuera.
+        // Juega con estos porcentajes si quieres que se meta más o menos en la pantalla.
+        className="
+    absolute 
+    z-20
+    
+    /* 1. EL TAMAÑO (Contrólalo aquí sin miedo) */
+    w-[150px] md:w-[400px] lg:w-[600px] max-w-none
+
+    /* 2. LA POSICIÓN (Usa píxeles exactos desde la esquina) */
+    /* top-[-50px]: La sube 50px hacia afuera del techo */
+    /* right-[-20px]: La mueve 20px hacia la derecha afuera de la pantalla */
+    top-[-50px] 
+    right-[-20px]
+
+    /* 3. LA ROTACIÓN */
+    rotate-[230deg] 
+    
+    /* 4. UTILIDADES */
+    opacity-90 pointer-events-none select-none
+  "
+      />
+
+      {/* --- IMAGEN CURVA IZQ.--- */}
+      <img
+        src="/images/arco-curvo-girasol-magnolia-rosa-yellow-lavandas.webp" // Usamos la imagen curva
+        alt="Decoración floral esquina superior izquierda"
+        // EXPLICACIÓN DE CLASES CLAVE:
+        // absolute top-0 left-0: Posición fija en la esquina superior izquierda.
+        // w-2/3 md:w-5/12: Tamaño relativo. 2/3 del ancho en celular, un poco menos de la mitad en PC.
+        // rotate-45: La rotación solicitada.
+        // translate-x-[20%] -translate-y-[35%]: Estos valores "empujan" la imagen hacia afuera.
+        // Juega con estos porcentajes si quieres que se meta más o menos en la pantalla.
+        className="
+    absolute 
+    z-20
+    
+    /* 1. EL TAMAÑO (Contrólalo aquí sin miedo) */
+    w-[80px] md:w-[400px] lg:w-[600px] max-w-none
+
+    /* 2. LA POSICIÓN (Usa píxeles exactos desde la esquina) */
+    /* top-[-50px]: La sube 50px hacia afuera del techo */
+    /* right-[-20px]: La mueve 20px hacia la derecha afuera de la pantalla */
+    top-[-20px] 
+    left-[-10px]
+
+    /* 3. LA ROTACIÓN */
+    rotate-[135deg] 
+    
+    /* 4. UTILIDADES */
+    opacity-90 pointer-events-none select-none
+  "
+      />
