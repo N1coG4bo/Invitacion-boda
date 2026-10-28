@@ -35,9 +35,12 @@ export default function Home() {
 
 
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    /* Envoltorio general con fondo neutro combinado con terracota en pantallas grandes (PC y Tablets) */
+    <div className="min-h-screen w-full bg-background md:bg-gradient-to-b md:from-[#2a130f] md:via-[#1f0e0b] md:to-[#140806] flex justify-center items-start md:py-8 lg:py-12 px-0 md:px-4">
+      {/* Contenedor que simula la pantalla de un celular/tarjeta en desktop y ocupa 100% en móvil */}
+      <div className="w-full sm:max-w-md md:max-w-lg min-h-screen bg-background text-foreground shadow-2xl rounded-t-[2.5rem] md:rounded-[2.5rem] md:ring-1 md:ring-[#FEF4D9]/15 overflow-hidden relative">
       {/* Hero Section */}
-      <FloralSectionTop className="relative delay-4000">
+      <FloralSectionTop className="relative delay-4000 rounded-t-[2.5rem]">
 
         {/* Contenedor Flexible */}
         <div className="flex flex-col items-center justify-center w-full md:w-full  relative z-10 delay-4000">
@@ -224,53 +227,52 @@ export default function Home() {
       </div>
 
       {/* Confirmación */}
-      <div className="text-center max-w-2xl mx-auto space-y-8 flex flex-col items-center justify-center w-full relative z-10 mt-10 md:mt-0">
-        <h2 className="text-5xl font-script mb-4">Confirmación de asistencia</h2>
-        <p className="text-lg text-muted-foreground leading-relaxed px-3 text-justify">
+      <div className="text-center max-w-xl mx-auto space-y-6 flex flex-col items-center justify-center w-full relative z-10 mt-10 md:mt-0 px-4">
+        <h2 className="text-4xl md:text-5xl font-script mb-2">Confirmación de asistencia</h2>
+        <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-center max-w-md">
           Tu presencia es muy importante. Confirma tu asistencia enviándonos un mensaje directo por WhatsApp a cualquiera de los dos.
         </p>
 
-        <div className="flex flex-col md:flex-row gap-6 justify-center items-center mt-6">
-
+        {/* Botones de WhatsApp */}
+        <div className="flex flex-col gap-4 w-full max-w-xs justify-center items-center mt-2">
           {/* Botón 1: Confirmar con Nicolás */}
-          <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full px-8 py-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-full md:w-auto">
+          <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full px-6 py-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-full">
             <a
-              href={linkNico} // <--- Aquí usamos la variable segura
+              href={linkNico}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 text-base font-bold tracking-wide"
             >
-              <MessageCircle className="w-6 h-6" />
+              <MessageCircle className="w-6 h-6 shrink-0" />
               Confirmar con Nicolás
             </a>
           </Button>
 
           {/* Botón 2: Confirmar con Carli */}
-          <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full px-8 py-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-full md:w-auto">
+          <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full px-6 py-6 shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 w-full">
             <a
-              href={linkCarli} // <--- Aquí usamos la variable segura
+              href={linkCarli}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 text-base font-bold tracking-wide"
             >
-              <MessageCircle className="w-6 h-6" />
+              <MessageCircle className="w-6 h-6 shrink-0" />
               Confirmar con Carli
             </a>
           </Button>
-
-
-        <div className="flex justify-center mt-10">
-          <img src="/images/children-icon.webp" alt="Dress Code" className="w-[30%] h-auto" />
         </div>
 
-        <p className="text-lg text-muted-foreground leading-relaxed px-3 text-center">
-          Queremos contarles que nuestro matrimonio será una celebración pensada para adultos, por lo que no habrá asistencia de niños. Esperamos con mucho cariño que puedan acompañarnos y disfrutar este momento con nosotros
-        </p>
+        {/* Bloque Solo Adultos */}
+        <div className="flex flex-col items-center justify-center gap-4 pt-6 w-full max-w-md">
+          <div className="flex justify-center">
+            <img src="/images/children-icon.webp" alt="Solo adultos" className="w-20 md:w-24 h-auto object-contain" />
+          </div>
 
-
-
-
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-center px-2">
+            Queremos contarles que nuestro matrimonio será una celebración pensada para adultos, por lo que no habrá asistencia de niños. Esperamos con mucho cariño que puedan acompañarnos y disfrutar este momento con nosotros.
+          </p>
         </div>
+
         <FloralSeparator className="-mt-4 md:-mt-8" />
       </div>
 
@@ -337,6 +339,7 @@ export default function Home() {
         <p className="font-serif italic">Con amor, Carli & Nicolás</p>
         <p className="mt-2 text-xs opacity-50">29 . 05 . 2026</p>
       </footer>
+      </div>
     </div>
   );
 }

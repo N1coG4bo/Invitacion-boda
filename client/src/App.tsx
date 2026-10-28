@@ -60,7 +60,7 @@ function App() {
             
             CAMBIO DINÁMICO: El fondo del contenedor también cambia para evitar bordes blancos al hacer scroll.
           */}
-          <div className={`min-h-[100dvh] flex flex-col relative ${isHome ? "bg-background" : "bg-black-background"}`}>
+          <div className={`min-h-[100dvh] flex flex-col relative ${isHome ? "bg-background md:bg-[#140806]" : "bg-black-background"}`}>
             
             {/* CAMBIO CLAVE 2: flex-1
                Este contenedor crecerá todo lo que pueda, empujando el reproductor hacia abajo

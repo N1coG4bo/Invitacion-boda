@@ -13,7 +13,7 @@ export function FloralSectionTop({ children, className, withDivider = false }: F
 // 1. ESTRUCTURA:
       // min-h-[85dvh]: Ocupa el 85% de la pantalla del celular SIEMPRE.
       // Esto empuja la playlist hacia abajo inmediatamente.
-"relative pt-32 md:pt-40 pb-10 overflow-hidden flex flex-col justify-center min-h-[92dvh]",    )}>
+"relative pt-32 md:pt-40 pb-10 overflow-hidden flex flex-col justify-center min-h-[92dvh]", className)}>
 
 
   <img
